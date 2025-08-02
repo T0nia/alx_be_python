@@ -1,7 +1,8 @@
+# programming_paradigm/bank_account.py
 
 class BankAccount:
     def __init__(self, initial_balance=0):
-        self.__account_balance = initial_balance  # Encapsulation
+        self.__account_balance = initial_balance  # Private attribute for encapsulation
 
     def deposit(self, amount):
         if amount > 0:
@@ -14,4 +15,5 @@ class BankAccount:
         return True
 
     def display_balance(self):
-        print(f"Current Balance: ${self.__account_balance}")
+        # Ensures the balance is displayed with two decimal places
+        print(f"Current Balance: ${self.__account_balance:.2f}")
